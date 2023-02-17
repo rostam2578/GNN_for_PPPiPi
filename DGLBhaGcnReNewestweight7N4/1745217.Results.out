@@ -1,0 +1,231 @@
+0: cmsgpu001.ihep.ac.cn
+GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-83673d1f-01b2-490d-5bc6-a84aaf3ddc65)
+Allocate GPU cards : 0
+
+modinfo:
+filename:       /lib/modules/3.10.0-1160.71.1.el7.x86_64/extra/nvidia.ko.xz
+firmware:       nvidia/515.65.01/gsp.bin
+alias:          char-major-195-*
+version:        515.65.01
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.9
+srcversion:     8049D44E2C1B08F41E1B8A6
+alias:          pci:v000010DEd*sv*sd*bc06sc80i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        drm
+vermagic:       3.10.0-1160.71.1.el7.x86_64 SMP mod_unload modversions 
+signer:         DKMS module signing key
+sig_key:        9B:9E:55:A9:86:D9:50:0B:6D:2D:9F:BA:A7:E6:45:39:D4:DD:5F:C6
+sig_hashalgo:   sha512
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_EnableS0ixPowerManagement:int
+parm:           NVreg_S0ixPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableGpuFirmware:int
+parm:           NVreg_EnableGpuFirmwareLogs:int
+parm:           NVreg_OpenRmEnableUnsupportedGpus:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_EnableDbgBreakpoint:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_ExcludedGpus:charp
+parm:           NVreg_DmaRemapPeerMmio:int
+parm:           rm_firmware_active:charp
+
+nvidia-smi:
+Sat Sep 17 05:55:54 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   22C    P0    32W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Mar_21_19:15:46_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.58
+Build cuda_11.3.r11.3/compiler.29745058_0
+
+ torch version: 1.10.2
+
+ cuda version: 11.3
+
+ is cuda available: True
+
+ CUDNN VERSION: 8200
+
+ Number CUDA Devices: 1
+
+ CUDA Device Name: NVIDIA A100-PCIE-40GB
+
+ CUDA Device Total Memory [GB]: 42.358472704
+
+ Device capability: (8, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2af389f3b8e0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1
+
+real	0m4.898s
+user	0m2.548s
+sys	0m1.196s
+[05:56:01] /opt/dgl/src/runtime/tensordispatch.cc:43: TensorDispatcher: dlopen failed: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/dgl/tensoradapter/pytorch/libtensoradapter_pytorch_1.10.2.so: cannot open shared object file: No such file or directory
+Using backend: pytorch
+/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/cupy/_environment.py:438: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy, cupy-cuda110
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+
+
+
+
+ The Network ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+
+edge_index
+ tensor([[   0,    1,    2,  ..., 4907, 4907, 4907],
+        [   1,    2,    3,  ..., 4918, 4919, 4920]]) 
+
+edge_index shape
+ torch.Size([2, 36593])
+graph: Graph(num_nodes=6796, num_edges=36593,
+      ndata_schemes={}
+      edata_schemes={}) 
+nodes: tensor([   0,    1,    2,  ..., 6793, 6794, 6795], device='cuda:0') 
+nodes shape: torch.Size([6796]) 
+edges: (tensor([   0,    1,    2,  ..., 4907, 4907, 4907], device='cuda:0'), tensor([   1,    2,    3,  ..., 4918, 4919, 4920], device='cuda:0')) 
+edges shae:
+
+number of nodes: 6796
+
+number of edges: 73186
+
+node features (random input): tensor([[-0.8170],
+        [ 0.2581],
+        [-0.7498],
+        ...,
+        [-0.5875],
+        [ 0.4288],
+        [-0.3977]], device='cuda:0', requires_grad=True) 
+node features sum: tensor(-88.5111, device='cuda:0', grad_fn=<SumBackward0>)
+
+edges features: tensor([[1.],
+        [1.],
+        [1.],
+        ...,
+        [1.],
+        [1.],
+        [1.]], device='cuda:0', requires_grad=True) 
+edges features sum: tensor(73186., device='cuda:0', grad_fn=<SumBackward0>)
+
+example: 
+Out degrees of node 234: 14
+
+In degrees of node 234: 14
+
+
+
+
+
+ Loading data ... 
+
+
+
+training set shape (80000, 6796) 
+sum 8401300
+
+target set shape (80000, 6796) 
+sum 5574226
+
+TraTen shape:
+ torch.Size([80000, 6796]) torch.Size([80000, 6796])
+Traceback (most recent call last):
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLBhaGcnReNewestweight7N4/./ModelBha.py", line 4, in <module>
+    from DataLoadBha import *
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLBhaGcnReNewestweight7N4/DataLoadBha.py", line 57, in <module>
+    fig.colorbar(ax.matshow(traincnnpppipi[evt], aspect=5, vmin=0, vmax=1, extent=[0, 288, 0, 43], origin='lower')\
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/axes/_axes.py", line 7926, in matshow
+    Z = np.asanyarray(Z)
+  File "cupy/_core/core.pyx", line 1473, in cupy._core.core._ndarray_base.__array__
+TypeError: Implicit conversion to a NumPy array is not allowed. Please use `.get()` to construct a NumPy array explicitly.
+
+real	0m14.782s
+user	0m7.143s
+sys	0m5.654s

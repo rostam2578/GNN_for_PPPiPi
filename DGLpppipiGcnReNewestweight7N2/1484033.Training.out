@@ -1,0 +1,158 @@
+0: cmsgpu001.ihep.ac.cn
+GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-83673d1f-01b2-490d-5bc6-a84aaf3ddc65)
+Allocate GPU cards : 0
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        465.19.01
+supported:      external
+license:        NVIDIA
+firmware:       nvidia/465.19.01/gsp.bin
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     976AD09EB9C3B8943CBA8C4
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           nv_cap_enable_devfs:Enable (1) or disable (0) nv-caps devfs support. Default: 1 (int)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_EnableS0ixPowerManagement:int
+parm:           NVreg_S0ixPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableGpuFirmware:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_ExcludedGpus:charp
+parm:           rm_firmware_active:charp
+
+nvidia-smi:
+Mon Jul 18 17:48:35 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 465.19.01    Driver Version: 465.19.01    CUDA Version: 11.3     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   32C    P0    33W / 250W |      0MiB / 40536MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Mar_21_19:15:46_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.58
+Build cuda_11.3.r11.3/compiler.29745058_0
+
+ torch version: 1.10.2
+
+ cuda version: 11.3
+
+ is cuda available: True
+
+ CUDNN VERSION: 8200
+
+ Number CUDA Devices: 1
+
+ CUDA Device Name: NVIDIA A100-PCIE-40GB
+
+ CUDA Device Total Memory [GB]: 42.505273344
+
+ Device capability: (8, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2b8b097c7fa0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1
+
+real	0m48.399s
+user	0m3.601s
+sys	0m3.057s
+[17:49:25] /opt/dgl/src/runtime/tensordispatch.cc:43: TensorDispatcher: dlopen failed: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/dgl/tensoradapter/pytorch/libtensoradapter_pytorch_1.10.2.so: cannot open shared object file: No such file or directory
+Using backend: pytorch
+
+
+
+
+ Training ... 
+
+
+
+
+
+
+ The Network ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+Traceback (most recent call last):
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLpppipiGcnReNewestweight7N2/./Training.py", line 5, in <module>
+    from Model import *
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLpppipiGcnReNewestweight7N2/Model.py", line 3, in <module>
+    from GraphDef import *
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLpppipiGcnReNewestweight7N2/GraphDef.py", line 10, in <module>
+    import matplotlib.pyplot as plt
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/pyplot.py", line 36, in <module>
+    import matplotlib.colorbar
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/colorbar.py", line 38, in <module>
+    from matplotlib import _api, collections, cm, colors, contour, ticker
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/contour.py", line 17, in <module>
+    import matplotlib.font_manager as font_manager
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/font_manager.py", line 1447, in <module>
+    fontManager = _load_fontmanager()
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/font_manager.py", line 1442, in _load_fontmanager
+    json_dump(fm, fm_path)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/font_manager.py", line 990, in json_dump
+    with cbook._lock_path(filename), open(filename, 'w') as fh:
+OSError: [Errno 122] Disk quota exceeded: '/hpcfs/bes/mlgpu/hoseinkk/home/.cache/matplotlib/fontlist-v330.json'
+
+real	0m24.623s
+user	0m3.514s
+sys	0m2.007s

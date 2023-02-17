@@ -1,0 +1,949 @@
+0: cmsgpu001.ihep.ac.cn
+GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-83673d1f-01b2-490d-5bc6-a84aaf3ddc65)
+Allocate GPU cards : 0
+
+modinfo:
+filename:       /lib/modules/3.10.0-1160.71.1.el7.x86_64/extra/nvidia.ko.xz
+firmware:       nvidia/515.65.01/gsp.bin
+alias:          char-major-195-*
+version:        515.65.01
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.9
+srcversion:     8049D44E2C1B08F41E1B8A6
+alias:          pci:v000010DEd*sv*sd*bc06sc80i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        drm
+vermagic:       3.10.0-1160.71.1.el7.x86_64 SMP mod_unload modversions 
+signer:         DKMS module signing key
+sig_key:        9B:9E:55:A9:86:D9:50:0B:6D:2D:9F:BA:A7:E6:45:39:D4:DD:5F:C6
+sig_hashalgo:   sha512
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_EnableS0ixPowerManagement:int
+parm:           NVreg_S0ixPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableGpuFirmware:int
+parm:           NVreg_EnableGpuFirmwareLogs:int
+parm:           NVreg_OpenRmEnableUnsupportedGpus:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_EnableDbgBreakpoint:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_ExcludedGpus:charp
+parm:           NVreg_DmaRemapPeerMmio:int
+parm:           rm_firmware_active:charp
+
+nvidia-smi:
+Mon Sep 19 14:02:16 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   22C    P0    31W / 250W |      0MiB / 40960MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Mar_21_19:15:46_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.58
+Build cuda_11.3.r11.3/compiler.29745058_0
+
+ torch version: 1.10.2
+
+ cuda version: 11.3
+
+ is cuda available: True
+
+ CUDNN VERSION: 8200
+
+ Number CUDA Devices: 1
+
+ CUDA Device Name: NVIDIA A100-PCIE-40GB
+
+ CUDA Device Total Memory [GB]: 42.358472704
+
+ Device capability: (8, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2b3599edc8e0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1
+
+real	0m4.227s
+user	0m2.278s
+sys	0m1.102s
+/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/cupy/_environment.py:438: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy, cupy-cuda110
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+[14:02:38] /opt/dgl/src/runtime/tensordispatch.cc:43: TensorDispatcher: dlopen failed: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/dgl/tensoradapter/pytorch/libtensoradapter_pytorch_1.10.2.so: cannot open shared object file: No such file or directory
+Using backend: pytorch
+
+
+
+
+
+ Loading data ... 
+
+
+
+training set shape (80000, 6796) 
+sum 8401300
+
+target set shape (80000, 6796) 
+sum 5574226
+
+TraTen and TrvTen shape:
+ torch.Size([80000, 6796]) torch.Size([80000, 6796])
+
+
+
+
+ The Network ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+
+edge_index
+ tensor([[   0,    1,    2,  ..., 4907, 4907, 4907],
+        [   1,    2,    3,  ..., 4918, 4919, 4920]]) 
+
+edge_index shape
+ torch.Size([2, 36593])
+graph: Graph(num_nodes=6796, num_edges=36593,
+      ndata_schemes={}
+      edata_schemes={}) 
+nodes: tensor([   0,    1,    2,  ..., 6793, 6794, 6795], device='cuda:0') 
+nodes shape: torch.Size([6796]) 
+edges: (tensor([   0,    1,    2,  ..., 4907, 4907, 4907], device='cuda:0'), tensor([   1,    2,    3,  ..., 4918, 4919, 4920], device='cuda:0')) 
+edges shae:
+
+number of nodes: 6796
+
+number of edges: 73186
+
+node features (random input): tensor([[ 0.9464],
+        [-1.8834],
+        [ 0.0689],
+        ...,
+        [ 1.0378],
+        [-0.7536],
+        [-1.8961]], device='cuda:0', requires_grad=True) 
+node features sum: tensor(35.4726, device='cuda:0', grad_fn=<SumBackward0>)
+
+edges features: tensor([[1.],
+        [1.],
+        [1.],
+        ...,
+        [1.],
+        [1.],
+        [1.]], device='cuda:0', requires_grad=True) 
+edges features sum: tensor(73186., device='cuda:0', grad_fn=<SumBackward0>)
+
+example: 
+Out degrees of node 234: 14
+
+In degrees of node 234: 14
+Model name: DGLBhaGcnReNewestweight7N4
+
+net GCN(
+  (conv1): GraphConv(in=1, out=256, normalization=both, activation=None)
+  (conv2): GraphConv(in=256, out=128, normalization=both, activation=None)
+  (conv3): GraphConv(in=128, out=64, normalization=both, activation=None)
+  (conv4): GraphConv(in=64, out=32, normalization=both, activation=None)
+  (conv5): GraphConv(in=32, out=1, normalization=both, activation=None)
+) 
+number of the free learnable parameters: 43777
+
+parameters of the network:
+
+name conv1.weight 
+shape:
+ torch.Size([1, 256]) 
+grad:
+ True 
+date:
+ tensor([[ 7.2236e-02,  7.0353e-02, -1.2577e-01, -1.3280e-01,  2.0449e-02,
+          2.0129e-02,  1.3037e-01, -1.0394e-01,  5.9240e-02,  1.4152e-01,
+          5.8902e-04,  1.1305e-01,  1.3166e-01,  1.4533e-01, -3.9267e-03,
+         -5.3864e-02,  1.0718e-01,  1.0000e-01,  1.0125e-01,  1.1639e-01,
+         -1.1090e-02, -3.9566e-02, -3.9996e-02, -1.8168e-02,  1.4790e-01,
+          1.2785e-01, -4.0854e-02, -2.0380e-02,  1.2577e-01, -1.2461e-01,
+          6.7824e-02,  1.1887e-01,  3.6520e-02,  8.0210e-02, -1.3367e-01,
+          6.2130e-03,  1.7630e-02, -3.1185e-02, -6.1702e-02,  3.1325e-02,
+          2.0255e-02,  1.1371e-01,  8.2235e-02,  4.3394e-02, -7.3735e-02,
+         -8.2401e-02,  8.5922e-02, -9.6718e-02,  4.2230e-02,  6.1733e-02,
+          8.4646e-02,  8.8103e-02, -8.7561e-02,  1.0957e-01, -7.1372e-02,
+         -8.3413e-02, -3.4326e-02, -7.6700e-02,  4.9424e-02, -9.0915e-02,
+         -3.3212e-02,  1.4940e-01,  3.6348e-02,  4.7899e-02,  5.6426e-02,
+         -1.3272e-02, -1.0120e-01,  6.8445e-02, -6.7008e-02,  9.0136e-02,
+          3.6507e-02, -6.6540e-02, -1.2269e-01,  8.7388e-02,  5.3855e-02,
+          5.6890e-02, -6.8702e-02,  1.0387e-01, -1.4329e-01, -8.2518e-02,
+         -3.1432e-02,  2.6515e-02,  9.3068e-02, -1.3765e-01, -7.2476e-02,
+         -3.3196e-02,  1.0397e-01,  1.0213e-01,  1.5091e-01,  9.9613e-02,
+         -1.2479e-01,  1.2215e-01, -6.4605e-02, -5.9147e-02, -4.1457e-02,
+         -5.4162e-02,  5.8041e-02, -1.0681e-01,  5.9655e-02, -9.0299e-02,
+         -1.4605e-01,  1.2808e-01, -3.9564e-02,  6.0826e-02,  3.2392e-03,
+          2.4482e-02, -7.2036e-03,  9.6411e-02,  4.9653e-02,  1.0731e-01,
+          9.5370e-02,  6.7965e-02, -7.1804e-02, -1.2375e-01, -3.5858e-02,
+          1.3141e-01, -9.9867e-02,  9.2057e-02,  8.3560e-02,  8.7253e-02,
+         -3.4111e-02,  2.8814e-02, -6.9817e-02,  6.4219e-02,  1.4686e-01,
+         -4.2572e-02, -1.0984e-01,  1.2445e-01,  1.2340e-01,  7.0181e-02,
+         -1.2030e-01,  5.2725e-02, -1.3789e-01,  1.2306e-01,  6.1313e-02,
+         -1.2174e-02,  3.1947e-02,  7.8547e-02,  1.4703e-04,  1.0569e-01,
+          7.2693e-02, -6.4749e-02, -5.8292e-02,  1.4152e-01,  5.2859e-02,
+          1.3136e-01,  1.2198e-01,  1.0398e-01,  1.1905e-01,  1.0745e-01,
+          5.6473e-02,  7.0111e-02, -1.3395e-01, -1.2521e-01, -2.4407e-02,
+          1.2920e-01,  1.4216e-02, -1.2535e-01, -4.7171e-03,  5.9838e-02,
+         -1.4985e-01, -1.2197e-01, -6.3551e-02,  1.1545e-01,  1.8948e-02,
+         -1.1399e-01, -3.7915e-02,  1.0021e-01,  9.7677e-02,  8.2476e-02,
+          9.9357e-02, -7.4645e-02, -7.3820e-02,  9.4847e-03,  2.1050e-03,
+         -1.2657e-01, -2.5830e-02, -1.2552e-01,  1.3698e-01,  1.4444e-01,
+          1.0659e-01,  6.1072e-02, -1.2416e-01, -8.3638e-03,  4.4361e-02,
+         -7.4448e-02, -1.3697e-01, -1.2756e-01, -3.2808e-03, -8.7570e-02,
+          6.2375e-02, -1.3502e-01,  8.4199e-02, -1.0501e-01,  1.4372e-01,
+          8.2683e-02,  6.4908e-02, -1.1201e-01,  1.3095e-02,  5.6995e-03,
+          7.9736e-02,  6.7497e-02, -1.4780e-01, -7.5813e-02, -1.1828e-01,
+         -9.7591e-02,  1.3648e-02, -9.1963e-02, -8.9932e-02,  1.0173e-01,
+         -1.2637e-01, -9.2433e-02, -6.2861e-02,  1.4276e-01, -8.2984e-02,
+         -8.7630e-02, -3.7028e-02,  7.1198e-02, -1.4364e-01, -1.0867e-01,
+          4.9458e-02, -1.4487e-01, -7.2459e-02,  6.7894e-02,  1.0940e-02,
+         -9.1055e-02,  4.4949e-02, -1.1979e-01,  6.5309e-02,  1.0612e-01,
+          5.9152e-02, -3.2056e-04,  1.1433e-01, -4.8829e-02,  7.5466e-02,
+          1.1567e-01, -1.0787e-01, -1.9597e-02, -4.3249e-02, -9.0854e-05,
+         -1.1079e-02, -1.1247e-01,  6.8362e-02,  1.7458e-03,  1.5030e-01,
+          1.2872e-01,  2.7219e-02, -6.5595e-03, -4.9731e-02, -8.0638e-02,
+          2.5495e-02, -5.4989e-02,  1.1771e-01,  7.5764e-02, -1.0793e-01,
+          1.4381e-01]], device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([[ 7.2236e-02,  7.0353e-02, -1.2577e-01, -1.3280e-01,  2.0449e-02,
+          2.0129e-02,  1.3037e-01, -1.0394e-01,  5.9240e-02,  1.4152e-01,
+          5.8902e-04,  1.1305e-01,  1.3166e-01,  1.4533e-01, -3.9267e-03,
+         -5.3864e-02,  1.0718e-01,  1.0000e-01,  1.0125e-01,  1.1639e-01,
+         -1.1090e-02, -3.9566e-02, -3.9996e-02, -1.8168e-02,  1.4790e-01,
+          1.2785e-01, -4.0854e-02, -2.0380e-02,  1.2577e-01, -1.2461e-01,
+          6.7824e-02,  1.1887e-01,  3.6520e-02,  8.0210e-02, -1.3367e-01,
+          6.2130e-03,  1.7630e-02, -3.1185e-02, -6.1702e-02,  3.1325e-02,
+          2.0255e-02,  1.1371e-01,  8.2235e-02,  4.3394e-02, -7.3735e-02,
+         -8.2401e-02,  8.5922e-02, -9.6718e-02,  4.2230e-02,  6.1733e-02,
+          8.4646e-02,  8.8103e-02, -8.7561e-02,  1.0957e-01, -7.1372e-02,
+         -8.3413e-02, -3.4326e-02, -7.6700e-02,  4.9424e-02, -9.0915e-02,
+         -3.3212e-02,  1.4940e-01,  3.6348e-02,  4.7899e-02,  5.6426e-02,
+         -1.3272e-02, -1.0120e-01,  6.8445e-02, -6.7008e-02,  9.0136e-02,
+          3.6507e-02, -6.6540e-02, -1.2269e-01,  8.7388e-02,  5.3855e-02,
+          5.6890e-02, -6.8702e-02,  1.0387e-01, -1.4329e-01, -8.2518e-02,
+         -3.1432e-02,  2.6515e-02,  9.3068e-02, -1.3765e-01, -7.2476e-02,
+         -3.3196e-02,  1.0397e-01,  1.0213e-01,  1.5091e-01,  9.9613e-02,
+         -1.2479e-01,  1.2215e-01, -6.4605e-02, -5.9147e-02, -4.1457e-02,
+         -5.4162e-02,  5.8041e-02, -1.0681e-01,  5.9655e-02, -9.0299e-02,
+         -1.4605e-01,  1.2808e-01, -3.9564e-02,  6.0826e-02,  3.2392e-03,
+          2.4482e-02, -7.2036e-03,  9.6411e-02,  4.9653e-02,  1.0731e-01,
+          9.5370e-02,  6.7965e-02, -7.1804e-02, -1.2375e-01, -3.5858e-02,
+          1.3141e-01, -9.9867e-02,  9.2057e-02,  8.3560e-02,  8.7253e-02,
+         -3.4111e-02,  2.8814e-02, -6.9817e-02,  6.4219e-02,  1.4686e-01,
+         -4.2572e-02, -1.0984e-01,  1.2445e-01,  1.2340e-01,  7.0181e-02,
+         -1.2030e-01,  5.2725e-02, -1.3789e-01,  1.2306e-01,  6.1313e-02,
+         -1.2174e-02,  3.1947e-02,  7.8547e-02,  1.4703e-04,  1.0569e-01,
+          7.2693e-02, -6.4749e-02, -5.8292e-02,  1.4152e-01,  5.2859e-02,
+          1.3136e-01,  1.2198e-01,  1.0398e-01,  1.1905e-01,  1.0745e-01,
+          5.6473e-02,  7.0111e-02, -1.3395e-01, -1.2521e-01, -2.4407e-02,
+          1.2920e-01,  1.4216e-02, -1.2535e-01, -4.7171e-03,  5.9838e-02,
+         -1.4985e-01, -1.2197e-01, -6.3551e-02,  1.1545e-01,  1.8948e-02,
+         -1.1399e-01, -3.7915e-02,  1.0021e-01,  9.7677e-02,  8.2476e-02,
+          9.9357e-02, -7.4645e-02, -7.3820e-02,  9.4847e-03,  2.1050e-03,
+         -1.2657e-01, -2.5830e-02, -1.2552e-01,  1.3698e-01,  1.4444e-01,
+          1.0659e-01,  6.1072e-02, -1.2416e-01, -8.3638e-03,  4.4361e-02,
+         -7.4448e-02, -1.3697e-01, -1.2756e-01, -3.2808e-03, -8.7570e-02,
+          6.2375e-02, -1.3502e-01,  8.4199e-02, -1.0501e-01,  1.4372e-01,
+          8.2683e-02,  6.4908e-02, -1.1201e-01,  1.3095e-02,  5.6995e-03,
+          7.9736e-02,  6.7497e-02, -1.4780e-01, -7.5813e-02, -1.1828e-01,
+         -9.7591e-02,  1.3648e-02, -9.1963e-02, -8.9932e-02,  1.0173e-01,
+         -1.2637e-01, -9.2433e-02, -6.2861e-02,  1.4276e-01, -8.2984e-02,
+         -8.7630e-02, -3.7028e-02,  7.1198e-02, -1.4364e-01, -1.0867e-01,
+          4.9458e-02, -1.4487e-01, -7.2459e-02,  6.7894e-02,  1.0940e-02,
+         -9.1055e-02,  4.4949e-02, -1.1979e-01,  6.5309e-02,  1.0612e-01,
+          5.9152e-02, -3.2056e-04,  1.1433e-01, -4.8829e-02,  7.5466e-02,
+          1.1567e-01, -1.0787e-01, -1.9597e-02, -4.3249e-02, -9.0854e-05,
+         -1.1079e-02, -1.1247e-01,  6.8362e-02,  1.7458e-03,  1.5030e-01,
+          1.2872e-01,  2.7219e-02, -6.5595e-03, -4.9731e-02, -8.0638e-02,
+          2.5495e-02, -5.4989e-02,  1.1771e-01,  7.5764e-02, -1.0793e-01,
+          1.4381e-01]], device='cuda:0', requires_grad=True)
+
+name conv1.bias 
+shape:
+ torch.Size([256]) 
+grad:
+ True 
+date:
+ tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+       device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+       device='cuda:0', requires_grad=True)
+
+name conv2.weight 
+shape:
+ torch.Size([256, 128]) 
+grad:
+ True 
+date:
+ tensor([[-0.0384, -0.0116,  0.0467,  ...,  0.0576, -0.0061, -0.0966],
+        [-0.0627,  0.0117, -0.0425,  ...,  0.0223,  0.1036,  0.0125],
+        [ 0.0397, -0.0362, -0.0281,  ...,  0.0431, -0.0774,  0.0698],
+        ...,
+        [-0.0403,  0.0708, -0.0052,  ..., -0.0145,  0.0713, -0.0786],
+        [-0.0691,  0.1199, -0.0623,  ...,  0.0474,  0.0073, -0.0685],
+        [-0.0295, -0.0896,  0.0269,  ..., -0.1007,  0.0265, -0.0494]],
+       device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([[-0.0384, -0.0116,  0.0467,  ...,  0.0576, -0.0061, -0.0966],
+        [-0.0627,  0.0117, -0.0425,  ...,  0.0223,  0.1036,  0.0125],
+        [ 0.0397, -0.0362, -0.0281,  ...,  0.0431, -0.0774,  0.0698],
+        ...,
+        [-0.0403,  0.0708, -0.0052,  ..., -0.0145,  0.0713, -0.0786],
+        [-0.0691,  0.1199, -0.0623,  ...,  0.0474,  0.0073, -0.0685],
+        [-0.0295, -0.0896,  0.0269,  ..., -0.1007,  0.0265, -0.0494]],
+       device='cuda:0', requires_grad=True)
+
+name conv2.bias 
+shape:
+ torch.Size([128]) 
+grad:
+ True 
+date:
+ tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0', requires_grad=True)
+
+name conv3.weight 
+shape:
+ torch.Size([128, 64]) 
+grad:
+ True 
+date:
+ tensor([[-0.1715,  0.1093,  0.0740,  ..., -0.1751, -0.0510, -0.0918],
+        [ 0.0675,  0.1157,  0.1603,  ..., -0.0520,  0.0133, -0.0135],
+        [-0.1070,  0.0191, -0.0124,  ..., -0.0612, -0.1302, -0.0485],
+        ...,
+        [-0.0491,  0.0466,  0.1057,  ..., -0.1456,  0.0071,  0.0186],
+        [ 0.1570,  0.0583, -0.1071,  ...,  0.1105,  0.1759, -0.0074],
+        [-0.1300, -0.1118, -0.0192,  ...,  0.0961,  0.0340, -0.1220]],
+       device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([[-0.1715,  0.1093,  0.0740,  ..., -0.1751, -0.0510, -0.0918],
+        [ 0.0675,  0.1157,  0.1603,  ..., -0.0520,  0.0133, -0.0135],
+        [-0.1070,  0.0191, -0.0124,  ..., -0.0612, -0.1302, -0.0485],
+        ...,
+        [-0.0491,  0.0466,  0.1057,  ..., -0.1456,  0.0071,  0.0186],
+        [ 0.1570,  0.0583, -0.1071,  ...,  0.1105,  0.1759, -0.0074],
+        [-0.1300, -0.1118, -0.0192,  ...,  0.0961,  0.0340, -0.1220]],
+       device='cuda:0', requires_grad=True)
+
+name conv3.bias 
+shape:
+ torch.Size([64]) 
+grad:
+ True 
+date:
+ tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+       device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+       device='cuda:0', requires_grad=True)
+
+name conv4.weight 
+shape:
+ torch.Size([64, 32]) 
+grad:
+ True 
+date:
+ tensor([[-0.1498,  0.0567, -0.0812,  ...,  0.1411, -0.1527,  0.2128],
+        [-0.1628, -0.0088,  0.1861,  ..., -0.1508,  0.0117,  0.0844],
+        [-0.2156, -0.1692,  0.0101,  ..., -0.1134, -0.0770, -0.0501],
+        ...,
+        [-0.0105,  0.1176,  0.0037,  ...,  0.0685, -0.0857, -0.1035],
+        [-0.1835, -0.0907, -0.1028,  ..., -0.0355, -0.0161,  0.0652],
+        [ 0.1596,  0.2239, -0.1045,  ...,  0.0890,  0.1833,  0.0095]],
+       device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([[-0.1498,  0.0567, -0.0812,  ...,  0.1411, -0.1527,  0.2128],
+        [-0.1628, -0.0088,  0.1861,  ..., -0.1508,  0.0117,  0.0844],
+        [-0.2156, -0.1692,  0.0101,  ..., -0.1134, -0.0770, -0.0501],
+        ...,
+        [-0.0105,  0.1176,  0.0037,  ...,  0.0685, -0.0857, -0.1035],
+        [-0.1835, -0.0907, -0.1028,  ..., -0.0355, -0.0161,  0.0652],
+        [ 0.1596,  0.2239, -0.1045,  ...,  0.0890,  0.1833,  0.0095]],
+       device='cuda:0', requires_grad=True)
+
+name conv4.bias 
+shape:
+ torch.Size([32]) 
+grad:
+ True 
+date:
+ tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0', requires_grad=True)
+
+name conv5.weight 
+shape:
+ torch.Size([32, 1]) 
+grad:
+ True 
+date:
+ tensor([[-0.0904],
+        [ 0.1279],
+        [ 0.2825],
+        [-0.2426],
+        [ 0.1954],
+        [-0.3517],
+        [ 0.3331],
+        [-0.0843],
+        [ 0.1459],
+        [ 0.1446],
+        [-0.3213],
+        [ 0.0798],
+        [-0.0789],
+        [ 0.2233],
+        [ 0.2112],
+        [-0.1946],
+        [-0.3491],
+        [ 0.1110],
+        [ 0.2112],
+        [-0.0778],
+        [ 0.4176],
+        [ 0.2717],
+        [-0.1420],
+        [ 0.4022],
+        [-0.2610],
+        [-0.1374],
+        [-0.3915],
+        [ 0.3017],
+        [ 0.2846],
+        [ 0.3890],
+        [ 0.3655],
+        [-0.2486]], device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([[-0.0904],
+        [ 0.1279],
+        [ 0.2825],
+        [-0.2426],
+        [ 0.1954],
+        [-0.3517],
+        [ 0.3331],
+        [-0.0843],
+        [ 0.1459],
+        [ 0.1446],
+        [-0.3213],
+        [ 0.0798],
+        [-0.0789],
+        [ 0.2233],
+        [ 0.2112],
+        [-0.1946],
+        [-0.3491],
+        [ 0.1110],
+        [ 0.2112],
+        [-0.0778],
+        [ 0.4176],
+        [ 0.2717],
+        [-0.1420],
+        [ 0.4022],
+        [-0.2610],
+        [-0.1374],
+        [-0.3915],
+        [ 0.3017],
+        [ 0.2846],
+        [ 0.3890],
+        [ 0.3655],
+        [-0.2486]], device='cuda:0', requires_grad=True)
+
+name conv5.bias 
+shape:
+ torch.Size([1]) 
+grad:
+ True 
+date:
+ tensor([0.], device='cuda:0') 
+parameter:
+ Parameter containing:
+tensor([0.], device='cuda:0', requires_grad=True)
+
+
+
+input node feature: 
+g.ndata[nfet] tensor([[0.],
+        [0.],
+        [0.],
+        ...,
+        [0.],
+        [0.],
+        [0.]], device='cuda:0') 
+g.ndata[nfet].shape torch.Size([6796, 1]) 
+g.ndata[nfet].sum tensor(82.4738, device='cuda:0')
+
+
+
+input graph: 
+g Graph(num_nodes=6796, num_edges=73186,
+      ndata_schemes={'nfet': Scheme(shape=(1,), dtype=torch.float32), 'h1': Scheme(shape=(256,), dtype=torch.float32), 'h2': Scheme(shape=(128,), dtype=torch.float32), 'h3': Scheme(shape=(64,), dtype=torch.float32)}
+      edata_schemes={'efet': Scheme(shape=(1,), dtype=torch.float32)}) 
+g.edata[efet].shape torch.Size([73186, 1]) 
+g.edata[efet] tensor([[1.],
+        [1.],
+        [1.],
+        ...,
+        [1.],
+        [1.],
+        [1.]], device='cuda:0', requires_grad=True) 
+g.edata[efet].sum tensor(73186., device='cuda:0', grad_fn=<SumBackward0>) 
+g.ndata[nfet].shape torch.Size([6796, 1]) 
+g.ndata[nfet] tensor([[0.],
+        [0.],
+        [0.],
+        ...,
+        [0.],
+        [0.],
+        [0.]], device='cuda:0') 
+g.ndata[nfet].sum tensor(82.4738, device='cuda:0')
+param0_0.shape torch.Size([256])
+param.data[:, 0].shape torch.Size([256])
+
+
+
+h after the first convolutional layer: 
+ tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0',
+       grad_fn=<AddBackward0>) 
+h.shape torch.Size([6796, 256]) 
+h.sum tensor(-47.7935, device='cuda:0', grad_fn=<SumBackward0>)
+
+
+
+h[:, 0].sum tensor(-6.8283, device='cuda:0', grad_fn=<SumBackward0>)
+
+g.ndata[nfet].sum() * conv1.weight[0] tensor(-6.9811, device='cuda:0')
+
+
+
+h[100].sum tensor(0.0924, device='cuda:0', grad_fn=<SumBackward0>)
+
+g.ndata[nfet].sum() * conv1.weight[100] tensor(0.0944, device='cuda:0')
+
+
+
+h[200].sum tensor(11.7935, device='cuda:0', grad_fn=<SumBackward0>)
+
+g.ndata[nfet].sum() * conv1.weight[200] tensor(12.0575, device='cuda:0')
+
+
+
+h1 after relu, the first updating, and another relu: 
+ tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0',
+       grad_fn=<ReluBackward0>) 
+h.shape torch.Size([6796, 256]) 
+h.sum tensor(10107.5977, device='cuda:0', grad_fn=<SumBackward0>)
+
+
+
+h2 after the second convolutional layer: 
+ tensor([[0.0000, 0.0000, 0.0219,  ..., 0.0211, 0.0089, 0.0000],
+        [0.0000, 0.0000, 0.0103,  ..., 0.0099, 0.0042, 0.0000],
+        [0.0000, 0.0000, 0.0029,  ..., 0.0028, 0.0012, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0', grad_fn=<ReluBackward0>) 
+h2.shape torch.Size([6796, 128]) 
+h2.sum tensor(61465.2383, device='cuda:0', grad_fn=<SumBackward0>)
+
+
+
+h2[0].sum tensor(0., device='cuda:0', grad_fn=<SumBackward0>)
+
+(h1.sum(axis=0) * param0_2).sum() + bias0 tensor(-92.7758, device='cuda:0', grad_fn=<AddBackward0>)
+
+
+
+h2[100].sum tensor(0., device='cuda:0', grad_fn=<SumBackward0>)
+
+(h1.sum(axis=0) * param50_2).sum() + bias50 tensor(-23.6576, device='cuda:0', grad_fn=<AddBackward0>)
+
+
+
+h2[200].sum tensor(0., device='cuda:0', grad_fn=<SumBackward0>)
+
+(h1.sum(axis=0) * param100_2).sum() + bias100 tensor(-21.7054, device='cuda:0', grad_fn=<AddBackward0>)
+
+
+
+g Graph(num_nodes=6796, num_edges=73186,
+      ndata_schemes={'nfet': Scheme(shape=(1,), dtype=torch.float32), 'h1': Scheme(shape=(256,), dtype=torch.float32), 'h2': Scheme(shape=(128,), dtype=torch.float32), 'h3': Scheme(shape=(64,), dtype=torch.float32)}
+      edata_schemes={'efet': Scheme(shape=(1,), dtype=torch.float32)})
+
+
+
+ output, 
+h5 tensor([[0.5858],
+        [0.4126],
+        [0.2777],
+        ...,
+        [0.0000],
+        [0.0000],
+        [0.0000]], device='cuda:0', grad_fn=<AddBackward0>) 
+h5.shape torch.Size([6796, 1]) 
+h5.sum tensor(27098.9375, device='cuda:0', grad_fn=<SumBackward0>) 
+g.edata[efet] tensor([[1.],
+        [1.],
+        [1.],
+        ...,
+        [1.],
+        [1.],
+        [1.]], device='cuda:0', requires_grad=True) 
+g.edata[efet].shape torch.Size([73186, 1]) 
+g.edata[efet].sum tensor(73186., device='cuda:0', grad_fn=<SumBackward0>)
+
+Passing event 1007 from the network before training input tensor([0., 0., 0.,  ..., 0., 0., 0.], device='cuda:0') 
+result1: tensor([[0.5858],
+        [0.4126],
+        [0.2777],
+        ...,
+        [0.0000],
+        [0.0000],
+        [0.0000]], device='cuda:0', grad_fn=<AddBackward0>) 
+result1.shape: torch.Size([6796, 1])
+
+
+
+input node feature: 
+g.ndata[nfet] tensor([[0.],
+        [0.],
+        [0.],
+        ...,
+        [0.],
+        [0.],
+        [0.]], device='cuda:0') 
+g.ndata[nfet].shape torch.Size([135920, 1]) 
+g.ndata[nfet].sum tensor(989.0452, device='cuda:0')
+
+
+
+input graph: 
+g Graph(num_nodes=135920, num_edges=1463720,
+      ndata_schemes={'nfet': Scheme(shape=(1,), dtype=torch.float32), 'h1': Scheme(shape=(256,), dtype=torch.float32), 'h2': Scheme(shape=(128,), dtype=torch.float32), 'h3': Scheme(shape=(64,), dtype=torch.float32)}
+      edata_schemes={'efet': Scheme(shape=(1,), dtype=torch.float32)}) 
+g.edata[efet].shape torch.Size([1463720, 1]) 
+g.edata[efet] tensor([[1.],
+        [1.],
+        [1.],
+        ...,
+        [1.],
+        [1.],
+        [1.]], device='cuda:0', grad_fn=<CatBackward0>) 
+g.edata[efet].sum tensor(1463720., device='cuda:0', grad_fn=<SumBackward0>) 
+g.ndata[nfet].shape torch.Size([135920, 1]) 
+g.ndata[nfet] tensor([[0.],
+        [0.],
+        [0.],
+        ...,
+        [0.],
+        [0.],
+        [0.]], device='cuda:0') 
+g.ndata[nfet].sum tensor(989.0452, device='cuda:0')
+param0_0.shape torch.Size([256])
+param.data[:, 0].shape torch.Size([256])
+
+
+
+h after the first convolutional layer: 
+ tensor([[ 0.0017,  0.0143, -0.0060,  ..., -0.0106,  0.0218, -0.0088],
+        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+        ...,
+        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000]],
+       device='cuda:0', grad_fn=<AddBackward0>) 
+h.shape torch.Size([135920, 256]) 
+h.sum tensor(-163.9059, device='cuda:0', grad_fn=<SumBackward0>)
+
+
+
+h[:, 0].sum tensor(10.9301, device='cuda:0', grad_fn=<SumBackward0>)
+
+g.ndata[nfet].sum() * conv1.weight[0] tensor(11.2045, device='cuda:0')
+
+
+
+h[100].sum tensor(-51.9948, device='cuda:0', grad_fn=<SumBackward0>)
+
+g.ndata[nfet].sum() * conv1.weight[100] tensor(-53.3001, device='cuda:0')
+
+
+
+h[200].sum tensor(23.5160, device='cuda:0', grad_fn=<SumBackward0>)
+
+g.ndata[nfet].sum() * conv1.weight[200] tensor(24.1063, device='cuda:0')
+
+
+
+h1 after relu, the first updating, and another relu: 
+ tensor([[0.0063, 0.0541, 0.0000,  ..., 0.0000, 0.0824, 0.0000],
+        [0.0052, 0.0445, 0.0000,  ..., 0.0000, 0.0678, 0.0000],
+        [0.0012, 0.0104, 0.0000,  ..., 0.0000, 0.0159, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0', grad_fn=<ReluBackward0>) 
+h.shape torch.Size([135920, 256]) 
+h.sum tensor(97878.0938, device='cuda:0', grad_fn=<SumBackward0>)
+
+
+
+h2 after the second convolutional layer: 
+ tensor([[0.0159, 0.3209, 0.0264,  ..., 0.0000, 0.2338, 0.0000],
+        [0.0136, 0.2750, 0.0226,  ..., 0.0000, 0.2003, 0.0000],
+        [0.0109, 0.2208, 0.0182,  ..., 0.0000, 0.1608, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0', grad_fn=<ReluBackward0>) 
+h2.shape torch.Size([135920, 128]) 
+h2.sum tensor(393536.6875, device='cuda:0', grad_fn=<SumBackward0>)
+
+
+
+h2[0].sum tensor(788.0402, device='cuda:0', grad_fn=<SumBackward0>)
+
+(h1.sum(axis=0) * param0_2).sum() + bias0 tensor(55.0784, device='cuda:0', grad_fn=<AddBackward0>)
+
+
+
+h2[100].sum tensor(4827.5054, device='cuda:0', grad_fn=<SumBackward0>)
+
+(h1.sum(axis=0) * param50_2).sum() + bias50 tensor(338.2073, device='cuda:0', grad_fn=<AddBackward0>)
+
+
+
+h2[200].sum tensor(3453.2146, device='cuda:0', grad_fn=<SumBackward0>)
+
+(h1.sum(axis=0) * param100_2).sum() + bias100 tensor(241.8926, device='cuda:0', grad_fn=<AddBackward0>)
+
+
+
+g Graph(num_nodes=135920, num_edges=1463720,
+      ndata_schemes={'nfet': Scheme(shape=(1,), dtype=torch.float32), 'h1': Scheme(shape=(256,), dtype=torch.float32), 'h2': Scheme(shape=(128,), dtype=torch.float32), 'h3': Scheme(shape=(64,), dtype=torch.float32)}
+      edata_schemes={'efet': Scheme(shape=(1,), dtype=torch.float32)})
+
+
+
+ output, 
+h5 tensor([[-2.2381e+00],
+        [-2.4217e+00],
+        [-2.6722e+00],
+        ...,
+        [-2.9156e-05],
+        [-4.8474e-05],
+        [-6.9287e-05]], device='cuda:0', grad_fn=<AddBackward0>) 
+h5.shape torch.Size([135920, 1]) 
+h5.sum tensor(-155358.2500, device='cuda:0', grad_fn=<SumBackward0>) 
+g.edata[efet] tensor([[1.],
+        [1.],
+        [1.],
+        ...,
+        [1.],
+        [1.],
+        [1.]], device='cuda:0', grad_fn=<CatBackward0>) 
+g.edata[efet].shape torch.Size([1463720, 1]) 
+g.edata[efet].sum tensor(1463720., device='cuda:0', grad_fn=<SumBackward0>)
+
+Passing two random events from the network before training 
+result1: tensor([[0.5858],
+        [0.4126],
+        [0.2777],
+        ...,
+        [0.0000],
+        [0.0000],
+        [0.0000]], device='cuda:0', grad_fn=<AddBackward0>) 
+result1.shape: torch.Size([6796, 1]) 
+input: tensor([0., 0., 0.,  ..., 0., 0., 0.], device='cuda:0')
+=> loading checkpoint from /hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLBhaGcnReNewestweight7N4/checkpoint_dir/90016284saved_checkpoint.tar
+
+
+
+load_model True 
+TraEvN 9001 
+BatchSize 30.0 
+EpochNum 6 
+LrVal 0.0001 
+weight_decay 5e-05 
+startmesh 284 
+endmesh 285 
+
+
+
+
+net GCN(
+  (conv1): GraphConv(in=1, out=256, normalization=both, activation=None)
+  (conv2): GraphConv(in=256, out=128, normalization=both, activation=None)
+  (conv3): GraphConv(in=128, out=64, normalization=both, activation=None)
+  (conv4): GraphConv(in=64, out=32, normalization=both, activation=None)
+  (conv5): GraphConv(in=32, out=1, normalization=both, activation=None)
+) 
+batcheddglgraph Graph(num_nodes=67960, num_edges=731860,
+      ndata_schemes={'nfet': Scheme(shape=(1,), dtype=torch.float32)}
+      edata_schemes={'efet': Scheme(shape=(1,), dtype=torch.float32)}) 
+TraTen tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.3054, 0.5586, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+Traceback (most recent call last):
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLBhaGcnReNewestweight7N4/./Results.py", line 41, in <module>
+    result1 = net(batcheddglgraph, TraTen[10000:10010].reshape(10 * 6796, 1))
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/DGLBhaGcnReNewestweight7N4/ModelBha.py", line 47, in forward
+    h = self.conv1(g, in_fet)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/dgl/nn/pytorch/conv/graphconv.py", line 437, in forward
+    rst = th.matmul(rst, weight)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument mat2 in method wrapper_mm)
+
+real	0m25.265s
+user	0m18.213s
+sys	0m4.867s
