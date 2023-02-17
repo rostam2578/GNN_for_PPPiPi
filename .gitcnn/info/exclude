@@ -1,0 +1,31 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+DGL*
+pyt_pppipi_cnn_2/runs/Sep01_00-43-54_gpu035.ihep.ac.cn/events.out.tfevents.1661964234.gpu035.ihep.ac.cn.44546.1
+pyt_pppipi_cnn_2/runs/Sep01_01-21-21_gpu015.ihep.ac.cn/events.out.tfevents.1661966481.gpu015.ihep.ac.cn.227338.1
+pyt_pppipi_cnn_2/runs/Sep01_00-28-09_gpu034.ihep.ac.cn/events.out.tfevents.1661963289.gpu034.ihep.ac.cn.8431.1
+pyt_pppipi_cnn_2/runs/Sep01_00-56-49_gpu012.ihep.ac.cn/events.out.tfevents.1661965009.gpu012.ihep.ac.cn.226406.1
+pyt_pppipi_cnn_2/checkpoint_dir/1000815480saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000830305saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000815300saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000810305saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000815240saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000815120saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/100081560saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000815360saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000815180saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/1000815420saved_checkpoint.tar
+pyt_pppipi_cnn_2/checkpoint_dir/10008100saved_checkpoint.tar
+pyt_pppipi_cnn_1/checkpoint_dir/1999840326saved_checkpoint.tar
+pyt_pppipi_cnn_1/checkpoint_dir/199982284saved_checkpoint.tar
+pyt_pppipi_cnn_1/checkpoint_dir/1999840284saved_checkpoint.tar
+pyt_pppipi_cnn_1/checkpoint_dir/1999840305saved_checkpoint.tar
+generate/digi_pppipi_5_0.csv
+generate/digi_pppipi_5_0_nonoise.csv
+files/trvalcnnpppipi.npy
+files/traincnnpppipi.npy
+files/traincnnpppipi_rectangle.npy

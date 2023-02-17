@@ -1,0 +1,61 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+pyt*
+DGLpppipiGcnReNewestweight7N2/1491631.Training.out
+DGLpppipiGcnReNewestweight7N2/1525104.Training.out
+DGLpppipiGcnReNewestweight7N2/1541642.Training.out
+DGLpppipiGcnReNewestweight7N2/runs/Aug13_06-41-04_cmsgpu001.ihep.ac.cn/events.out.tfevents.1660344064.cmsgpu001.ihep.ac.cn.222577.0
+DGLpppipiGcnReNewestweight7N2/1540241.Training.out
+DGLpppipiGcnReNewestweight7N2/1540099.Training.out
+DGLpppipiGcnReNewestweight7N2/1491630.Training.out
+DGLpppipiGcnReNewestweight7N2/1541270.Training.out
+DGLpppipiGcnReNewestweight7N2/1491629.Training.out
+DGLpppipiGcnReNewestweight7N2/1539202.Training.out
+DGLpppipiGcnReNewestweight7N2/1539149.Training.out
+DGLpppipiGcnReNewestweight7N2/1541245.Training.out
+DGLpppipiGcnReNewestweight7N2/1491620.Training.out 
+DGLBhaGcnReNewestweight7N4SecNei/1841227.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1841528.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1937421.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1841428.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1847400.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1853758.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1868232.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1841449.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1944854.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1840990.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1841407.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1841508.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1932269.Training.out
+DGLBhaGcnReNewestweight7N4SecNei/1867560.Training.out
+DGLBhaGcnReNewestweight7N4/1761539.Training.out
+DGLBhaGcnReNewestweight7N4/1769822.Training.out
+DGLBhaGcnReNewestweight7N4/1763703.Training.out
+DGLBhaGcnReNewestweight7N4/1765081.Training.out
+DGLBhaGcnReNewestweight7N4/1763825.Training.out
+DGLBhaGcnReNewestweight7N4/1766890.Training.out
+DGLBhaGcnReNewestweight7N4/1767719.Training.out
+DGLBhaGcnReNewestweight7N4/1769111.Training.out
+DGLBhaGcnReNewestweight7N4/1771626.Training.out
+DGLBhaGcnReNewestweight7N4/1764081.Training.out
+DGLBhaGcnReNewestweight7N4/1768072.Training.out
+DGLBhaGcnReNewestweight7N4/1763584.Training.out
+DGLBhaGcnReNewestweight7N4/1767462.Training.out
+DGLBhaGcnReNewestweight7N4/1763600.Training.out
+DGLBhaGcnReNewestweight7N4/1745242.Training.out
+DGLBhaGcnReNewestweight7N4/1763612.Training.out
+DGLBhaGcnReNewestweight7N4/1745240.Training.out
+DGLBhaGcnReNewestweight7N4/1767598.Training.out
+DGLBhaGcnReNewestweight7N4/1749549.Training.out
+DGLBhaGcnReNewestweight7N4/1763925.Training.out
+DGLBhaGcnReNewestweight7N4/1745236.Training.out
+DGLBhaGcnReNewestweight7N4/1772537.Training.out
+generate/digi_pppipi_5_0.csv
+generate/digi_pppipi_5_0_nonoise.csv
+files/trvalcnnpppipi.npy
+files/traincnnpppipi.npy
+files/traincnnpppipi_rectangle.npy
